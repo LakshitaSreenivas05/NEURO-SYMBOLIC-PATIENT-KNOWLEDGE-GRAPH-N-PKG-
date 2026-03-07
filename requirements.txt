@@ -1,0 +1,11 @@
+langchain
+langchain-community
+langchain-groq
+ollama
+neo4j
+python-dotenv
+streamlit
+pandas
+spacy==3.7.2
+scispacy==0.5.3
+openai-whisper

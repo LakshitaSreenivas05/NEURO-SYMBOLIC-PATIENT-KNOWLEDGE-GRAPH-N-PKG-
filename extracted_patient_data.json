@@ -1,0 +1,22 @@
+{
+    "patient_name": "Sanna Rajan Jandar",
+    "gender": null,
+    "diseases": [
+        "type of diabetes"
+    ],
+    "medications": [
+        "null"
+    ],
+    "allergies": [
+        "medicine"
+    ],
+    "symptoms": [
+        "null"
+    ],
+    "important_dates": [
+        "8th of second"
+    ],
+    "warnings": [
+        "null"
+    ]
+}
