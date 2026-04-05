@@ -48,7 +48,7 @@ The **Neuro-Symbolic Patient Knowledge Graph (N-PKG)** is an intelligent medical
 
 2. **Create virtual environment**
    ```bash
-   python -m venv venv
+   python-3.11 -m venv venv
    source venv/bin/activate  # On Windows: venv\Scripts\activate
    ```
 
