@@ -495,7 +495,3 @@ patient_notes = [
         Monitor respiratory effort closely."""
     }
 ]
-
-print(f"Total patients loaded: {len(patient_notes)}")
-for p in patient_notes:
-    print(f"- {p['id']}: {p['name']}, Age {p['age']}")

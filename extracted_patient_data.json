@@ -1,22 +1,18 @@
 {
-    "patient_name": "Sanna Rajan Jandar",
-    "gender": null,
+    "patient_name": "Linda",
+    "gender": "female",
     "diseases": [
-        "type of diabetes"
+        "osteoporosis",
+        "hypothermicism"
     ],
     "medications": [
-        "null"
+        "Levo-proxyl 50 MCG daily",
+        "calcium supplements"
     ],
-    "allergies": [
-        "medicine"
-    ],
-    "symptoms": [
-        "null"
-    ],
+    "allergies": [],
+    "symptoms": [],
     "important_dates": [
-        "8th of second"
+        "2023-03-20"
     ],
-    "warnings": [
-        "null"
-    ]
+    "warnings": []
 }

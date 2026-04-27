@@ -10,11 +10,11 @@ try:
     )
     print(" BioMistral initialized successfully.")
 except Exception as e:
-    print(f"❌ Initialization Failed: {e}")
+    print(f" Initialization Failed: {e}")
     sys.exit(1)
 
 def structure_entities(transcript, raw_entities):
-    print("\n→ Structuring with BioMistral...")
+    print("\n-> Structuring with BioMistral...")
     
     # Convert entities list to simple text
     entities_text = ", ".join([e['text'] for e in raw_entities])
@@ -44,16 +44,18 @@ CRITICAL INSTRUCTIONS:
     "allergies": ["list of strings"],
     "symptoms": ["list of strings"],
     "important_dates": ["list of strings in YYYY-MM-DD format if possible"],
-    "warnings": ["list of strings"]
+    "warnings": ["list of strings"],
+    "scheduled_tests": ["list of strings (e.g., Blood Test, MRI, X-Ray)"]
 }}
 """
 
-    print("→ Sending prompt to Ollama (waiting for response...)")
+    print("-> Sending prompt to Ollama (waiting for response...)")
     try:
         response = llm.invoke(prompt)
-        print("✅ Response received from model!")
+        print(" Response received from model!")
         return response
     except Exception as e:
-        print(f"\n❌ CRASH DETECTED during llm.invoke():")
+        print(f"\n CRASH DETECTED during llm.invoke():")
         print(f"Error Details: {e}")
         return None
+    
