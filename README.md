@@ -38,7 +38,14 @@ The **Neuro-Symbolic Patient Knowledge Graph (N-PKG)** is an intelligent medical
 - Neo4j Database (local or cloud instance)
 - Microphone for audio input
 
-### Setup
+### Setup Neo4j (Local)
+
+1. **Download and Install [Neo4j Desktop](https://neo4j.com/download/)**.
+2. **Create a New Project** and click **Add -> Local DBMS**.
+3. Set the password for your database (make note of it for the `.env` file).
+4. **Start the DBMS**. Ensure the Bolt port is `7687`.
+
+### Application Setup
 
 1. **Clone the repository**
    ```bash
@@ -48,8 +55,9 @@ The **Neuro-Symbolic Patient Knowledge Graph (N-PKG)** is an intelligent medical
 
 2. **Create virtual environment**
    ```bash
-   python-3.11 -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   python -m venv venv
+   # On macOS/Linux: source venv/bin/activate
+   # On Windows: venv\Scripts\activate
    ```
 
 3. **Install dependencies**
@@ -58,8 +66,8 @@ The **Neuro-Symbolic Patient Knowledge Graph (N-PKG)** is an intelligent medical
    ```
 
 4. **Configure environment**
-   Create a `.env` file with your Neo4j credentials:
-   ```
+   Create a `.env` file in the root directory with your Neo4j credentials:
+   ```env
    NEO4J_URI=bolt://localhost:7687
    NEO4J_USER=neo4j
    NEO4J_PASSWORD=your_password
@@ -72,8 +80,19 @@ The **Neuro-Symbolic Patient Knowledge Graph (N-PKG)** is an intelligent medical
 
 ## Usage
 
-### Run the Pipeline
+### Run the Web Interface (Streamlit)
 
+The main entry point for doctors and patients is the Streamlit web application.
+
+```bash
+streamlit run app.py
+```
+
+This will launch a local server and open the interface in your web browser (typically at `http://localhost:8501`).
+
+### Run the Command-line Pipeline (Optional)
+
+If you wish to test the extraction workflow without the UI:
 ```bash
 python pipeline.py
 ```
